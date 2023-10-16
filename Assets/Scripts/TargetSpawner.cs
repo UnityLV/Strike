@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class TargetSpawner : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D _targetPrefab;
+    [SerializeField] private Rigidbody2D _trapPrefab;
     [SerializeField] private float _forceMagnitude = 1f;
     [SerializeField] private float _coneAngle = 45f;
     [SerializeField] private float _spawnRate = 1f;
@@ -19,9 +20,14 @@ public class TargetSpawner : MonoBehaviour
 
     private void SpawnTarget()
     {
-        Rigidbody2D targetInstance = Instantiate(_targetPrefab, transform.position, Quaternion.identity);
+        Rigidbody2D targetInstance = Instantiate(GetToSpawn(), transform.position, Quaternion.identity);
         Vector2 forceDirection = CalculateForceDirection();
         targetInstance.AddForce(forceDirection * _forceMagnitude, ForceMode2D.Impulse);
+    }
+
+    private Rigidbody2D GetToSpawn()
+    {
+        return Random.value > 0.1f ? _targetPrefab : _trapPrefab;
     }
 
     private Vector2 CalculateForceDirection()

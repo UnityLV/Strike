@@ -26,8 +26,7 @@ public class MoveAlongEdge : MonoBehaviour
 
     private void Start()
     {
-        
-        _speed += Random.Range(-0.2f, 0.2f);
+        _speed += Random.Range(-0.1f, 0.1f);
         float halfHeight = Camera.main.orthographicSize;
         float halfWidth = halfHeight * Camera.main.aspect;
 
