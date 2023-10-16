@@ -27,7 +27,7 @@ public class TargetSpawner : MonoBehaviour
 
     private Rigidbody2D GetToSpawn()
     {
-        return Random.value > 0.1f ? _targetPrefab : _trapPrefab;
+        return Random.value > 0.3f ? _targetPrefab : _trapPrefab;
     }
 
     private Vector2 CalculateForceDirection()
