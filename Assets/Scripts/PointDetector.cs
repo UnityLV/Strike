@@ -1,26 +1,38 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PointDetector : MonoBehaviour
 {
-    public int Points { get; private set; }
     [SerializeField] private TMP_Text _counterText;
+    public DefeatSystem DefeatSystem;
+    public int Points => Game.Instance.LevelGoal.Points;
 
     private void Start()
     {
-        _counterText.text = $"Points: {Points}";
+        UpdatePoints();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent(out Point point))
         {
-            Points++;
-            _counterText.text = $"Points: {Points}";
+            Game.Instance.LevelGoal.AddPoints(1);
+            UpdatePoints();
+            Destroy(other.gameObject);
+        }
+
+        if (other.transform.TryGetComponent(out Enemy enemy))
+        {
+            Debug.Log("Enemy hit home");
+            DefeatSystem.Defeat(600);
             Destroy(other.gameObject);
         }
     }
 
+    private void UpdatePoints()
+    {
+        int targetPoints = Game.Instance.LevelGoal.Goal;
+        _counterText.text = $"Points: {Points}/{targetPoints}";
+    }
 }

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using DG.Tweening;
 using NaughtyAttributes;
 using UnityEngine;
@@ -27,6 +28,11 @@ namespace InGameUI
         {
             _defaultPosition = transform.localPosition;
             _toMovePosition = _defaultPosition + _inPosition;
+        }
+
+        private void OnDestroy()
+        {
+            transform.DOKill();
         }
 
         [Button()]

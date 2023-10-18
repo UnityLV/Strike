@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using NaughtyAttributes;
 using UnityEngine;
@@ -7,10 +8,17 @@ using UnityEngine.Events;
 public class DefeatSystem : MonoBehaviour
 {
     [SerializeField] private UnityEvent _onDefeat;
-    [SerializeField] private UnityEvent _onVictory;
+   
 
     [Button()]
-    public async void Defeat()
+    public async void Defeat(int delay = 200)
+    {
+        DisableALL();
+        await Task.Delay(delay);
+        _onDefeat.Invoke();
+    }
+
+    public void DisableALL()
     {
         var allEnemySpawners = FindObjectsOfType<EnemySpawner>();
         var allTargetSpawners = FindObjectsOfType<TargetSpawner>();
@@ -23,16 +31,7 @@ public class DefeatSystem : MonoBehaviour
         Disable(allRigidBody2Ds);
         Disable(controllers);
         Disable(allMove);
-        await Task.Delay(200);
-        _onDefeat.Invoke();
     }
-    [Button()]
-    public void Victory()
-    {
-        
-        _onVictory.Invoke();
-    }
-  
 
     private void Disable(params Component[] components)
     {

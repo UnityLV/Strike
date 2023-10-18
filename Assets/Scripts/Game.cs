@@ -1,17 +1,12 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
 
-    public LevelSettings CurrentsSettings { get; private set; }
-
-    public void LoadLevel(LevelSettings settings)
-    {
-        CurrentsSettings = settings;
-        SceneManager.LoadScene("Game");
-    }
+    public readonly LevelCompleteCondition LevelCompleteCondition = new();
+    public readonly LevelGoal LevelGoal = new();
+    public readonly LevelLoader LevelLoader = new();
 
     private void Awake()
     {
