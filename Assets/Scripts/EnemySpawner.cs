@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(_spawnRate, _spawnRate  + _offset));
             Rigidbody2D targetInstance = Instantiate(_targetPrefab, transform.position, Quaternion.identity);
             targetInstance.AddForce(_direction * _forceMagnitude, ForceMode2D.Impulse);
+            Destroy(targetInstance.gameObject, 10f);
         }
-       
     }
 }

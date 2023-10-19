@@ -23,6 +23,7 @@ public class TargetSpawner : MonoBehaviour
         Rigidbody2D targetInstance = Instantiate(GetToSpawn(), transform.position, Quaternion.identity);
         Vector2 forceDirection = CalculateForceDirection();
         targetInstance.AddForce(forceDirection * _forceMagnitude, ForceMode2D.Impulse);
+        Destroy(targetInstance.gameObject, 10f);
     }
 
     private Rigidbody2D GetToSpawn()
