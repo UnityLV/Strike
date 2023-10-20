@@ -6,9 +6,10 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject _explodeOfWallEffect;
 
+    
     public void ExplodeOfWall()
     {
-        var effect = Instantiate(_explodeOfWallEffect, transform.position, Quaternion.identity);
+        var effect = Instantiate(_explodeOfWallEffect, transform.position + Vector3.back, Quaternion.identity);
         Destroy(effect, 4);
     }
 }

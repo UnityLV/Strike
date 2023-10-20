@@ -15,9 +15,7 @@ public class PointDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        
-        
-        if (other.TryGetComponent(out Point point))
+        if (other.TryGetComponent(out Target point))
         {
             if (Game.Instance != null)
             {
@@ -25,6 +23,7 @@ public class PointDetector : MonoBehaviour
             }
           
             UpdatePoints();
+            point.SplashEffect();
             Destroy(other.gameObject);
         }
 

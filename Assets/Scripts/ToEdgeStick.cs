@@ -5,7 +5,7 @@ public class ToEdgeStick : MonoBehaviour
 {
     [SerializeField] private Vector2 _position;
 
-    private void Start()
+    private void Awake()
     {
         float halfHeight = Camera.main.orthographicSize;
         float halfWidth = halfHeight * Camera.main.aspect;
