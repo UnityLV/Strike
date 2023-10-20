@@ -9,6 +9,7 @@ public class Fade : MonoBehaviour
     [SerializeField] private float _durationIn = 1f;
     [SerializeField] private float _durationOut = 1f;
     [SerializeField] private CanvasGroup _canvasGroup;
+    
 
     public void FadeIn()
     {

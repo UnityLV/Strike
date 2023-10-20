@@ -15,9 +15,15 @@ public class PointDetector : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
+        
         if (other.TryGetComponent(out Point point))
         {
-            Game.Instance.LevelGoal.AddPoints(1);
+            if (Game.Instance != null)
+            {
+                Game.Instance.LevelGoal.AddPoints(1);
+            }
+          
             UpdatePoints();
             Destroy(other.gameObject);
         }
@@ -32,6 +38,10 @@ public class PointDetector : MonoBehaviour
 
     private void UpdatePoints()
     {
+        if (Game.Instance == null)
+        {
+            return;
+        }
         int targetPoints = Game.Instance.LevelGoal.Goal;
         _counterText.text = $"Points: {Points}/{targetPoints}";
     }

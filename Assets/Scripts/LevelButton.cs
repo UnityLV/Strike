@@ -35,7 +35,6 @@ public class LevelButton : MonoBehaviour
     {
         await Task.Delay(1);
         GetComponent<Button>().onClick.AddListener(LoadLevel);
-        GetComponentInChildren<TMP_Text>().text = _settings.Level.ToString();
         SetView();
     }
 

@@ -7,6 +7,7 @@ public class Wall : MonoBehaviour
         if (other.transform.TryGetComponent(out Enemy enemy))
         {
             Debug.Log("Enemy destroyed");
+            enemy.ExplodeOfWall();
             Destroy(other.gameObject);
         }
        

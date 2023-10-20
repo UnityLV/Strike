@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.smkplus.custom-toolbar": "https://github.com/smkplus/CustomToolbar.git#master",
+"com.coffee.softmask-for-ugui": "https://github.com/mob-sakai/SoftMaskForUGUI.git#1.0.2",
     "com.unity.collab-proxy": "2.0.4",
     "com.unity.feature.2d": "2.0.0",
     "com.unity.ide.rider": "3.0.21",
