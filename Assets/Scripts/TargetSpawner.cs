@@ -15,7 +15,7 @@ public class TargetSpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(SpawnTarget), _offset + 1, _spawnRate + _offset);
+        InvokeRepeating(nameof(SpawnTarget), _offset + 3, _spawnRate + _offset);
     }
 
     private void SpawnTarget()

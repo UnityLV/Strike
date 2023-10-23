@@ -18,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnTarget()
     {
+        yield return new WaitForSeconds(2);
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(_spawnRate, _spawnRate  + _offset));
