@@ -11,6 +11,11 @@ public class PointDetector : MonoBehaviour
 
     private void Start()
     {
+        if (Game.Instance != null)
+        {
+            Game.Instance.LevelGoal.Reset();
+        }
+
         UpdatePoints();
     }
 
@@ -22,18 +27,20 @@ public class PointDetector : MonoBehaviour
             {
                 Game.Instance.LevelGoal.AddPoints(1);
             }
-          
+
             UpdatePoints();
             point.SplashEffect();
+            
             Destroy(other.gameObject);
         }
 
         if (other.transform.TryGetComponent(out Enemy enemy))
         {
-            Debug.Log("Enemy hit home");
             Vector2 collisionPoint = other.ClosestPoint(transform.position);
             ShowDeadParticles(collisionPoint);
+            
             DefeatSystem.Defeat(900);
+            
             Destroy(other.gameObject);
         }
     }
@@ -50,6 +57,7 @@ public class PointDetector : MonoBehaviour
         {
             return;
         }
+
         int targetPoints = Game.Instance.LevelGoal.Goal;
         _counterText.text = $"Points: {Points}/{targetPoints}";
     }

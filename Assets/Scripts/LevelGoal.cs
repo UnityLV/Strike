@@ -3,13 +3,18 @@
 public class LevelGoal
 {
     public Action ReachCallback { get; set; }
-    public int Goal { get; set; }
-    public int Points { get; set; }
+    public int Goal { get; private set; }
+    public int Points { get; private set; }
 
     public void AddPoints(int points)
     {
         Points += points;
         TryCompleteGoal();
+    }
+    
+    public void Reset()
+    {
+        Points = 0;
     }
 
     private void TryCompleteGoal()

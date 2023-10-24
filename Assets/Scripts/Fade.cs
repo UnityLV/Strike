@@ -10,14 +10,15 @@ public class Fade : MonoBehaviour
     [SerializeField] private float _durationIn = 1f;
     [SerializeField] private float _durationOut = 1f;
     
-    [SerializeField] private float _delay;
+    [SerializeField] private float _delayIn;
+    [SerializeField] private float _delayOut;
     
     [SerializeField] private CanvasGroup _canvasGroup;
     
 
     public async void FadeIn()
     {
-        await Task.Delay((int)(_delay * 1000));
+        await Task.Delay((int)(_delayIn * 1000));
         if (_canvasGroup == null)
         {
             return;
@@ -30,7 +31,7 @@ public class Fade : MonoBehaviour
 
     public async void FadeOut()
     {
-        await Task.Delay((int)(_delay * 1000));
+        await Task.Delay((int)(_delayOut * 1000));
         if (_canvasGroup == null)
         {
             return;
