@@ -358,6 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durationIn: 0.3
   _durationOut: 1
+  _delay: 0
   _canvasGroup: {fileID: 243363832}
 --- !u!225 &243363832
 CanvasGroup:
@@ -1709,6 +1710,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durationIn: 0.3
   _durationOut: 0.3
+  _delay: 0
   _canvasGroup: {fileID: 708402718}
 --- !u!114 &708402720
 MonoBehaviour:
@@ -2256,6 +2258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durationIn: 1
   _durationOut: 0.2
+  _delay: 0
   _canvasGroup: {fileID: 893502216}
 --- !u!225 &893502216
 CanvasGroup:
@@ -3164,6 +3167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durationIn: 1
   _durationOut: 0.2
+  _delay: 0
   _canvasGroup: {fileID: 1215038562}
 --- !u!225 &1215038562
 CanvasGroup:
@@ -4196,6 +4200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durationIn: 1
   _durationOut: 0.2
+  _delay: 0
   _canvasGroup: {fileID: 1601318236}
 --- !u!225 &1601318236
 CanvasGroup:
@@ -4640,6 +4645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _durationIn: 1
   _durationOut: 0.2
+  _delay: 0
   _canvasGroup: {fileID: 1642817080}
 --- !u!225 &1642817080
 CanvasGroup:
@@ -5378,6 +5384,7 @@ GameObject:
   - component: {fileID: 2041526255}
   - component: {fileID: 2041526254}
   - component: {fileID: 2041526257}
+  - component: {fileID: 2041526258}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5476,13 +5483,13 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -5503,6 +5510,23 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &2041526258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041526253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 297969701f867ed4093d1d115d7288be, type: 2}
 --- !u!1001 &6217198536755001906
 PrefabInstance:
   m_ObjectHideFlags: 0

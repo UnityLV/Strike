@@ -1,16 +1,17 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class Target : MonoBehaviour
 {
     [SerializeField] private GameObject _splashEffect;
-    
-    private async void Awake()
+  
+    private void OnTriggerExit2D(Collider2D other)
     {
-        await Task.Delay(400);
-        gameObject.layer = LayerMask.NameToLayer("Target");
+        GetComponent<Collider2D>().isTrigger = false;
     }
-
     public void SplashEffect()
     {
         var effect = Instantiate(_splashEffect, transform.position, Quaternion.identity);

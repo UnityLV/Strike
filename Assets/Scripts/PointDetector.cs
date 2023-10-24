@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class PointDetector : MonoBehaviour
 {
+    [SerializeField] private GameObject _deadEffect;
     [SerializeField] private TMP_Text _counterText;
     public DefeatSystem DefeatSystem;
     public int Points => Game.Instance.LevelGoal.Points;
@@ -30,9 +31,17 @@ public class PointDetector : MonoBehaviour
         if (other.transform.TryGetComponent(out Enemy enemy))
         {
             Debug.Log("Enemy hit home");
-            DefeatSystem.Defeat(600);
+            Vector2 collisionPoint = other.ClosestPoint(transform.position);
+            ShowDeadParticles(collisionPoint);
+            DefeatSystem.Defeat(900);
             Destroy(other.gameObject);
         }
+    }
+
+    private void ShowDeadParticles(Vector3 point)
+    {
+        var effect = Instantiate(_deadEffect, point, Quaternion.identity);
+        Destroy(effect, 5);
     }
 
     private void UpdatePoints()

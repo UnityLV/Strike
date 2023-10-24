@@ -18,6 +18,10 @@ public class Fade : MonoBehaviour
     public async void FadeIn()
     {
         await Task.Delay((int)(_delay * 1000));
+        if (_canvasGroup == null)
+        {
+            return;
+        }
         _canvasGroup.DOKill();
         _canvasGroup.DOFade(1f, _durationIn);
         _canvasGroup.interactable = true;
@@ -27,6 +31,10 @@ public class Fade : MonoBehaviour
     public async void FadeOut()
     {
         await Task.Delay((int)(_delay * 1000));
+        if (_canvasGroup == null)
+        {
+            return;
+        }
         _canvasGroup.DOKill();
         _canvasGroup.DOFade(0f, _durationOut);
         _canvasGroup.interactable = false;

@@ -9,6 +9,8 @@ public class BounceEffect : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        
+
         if (other.transform.TryGetComponent(out Bounce _))
         {
             _collideWith = other.transform;
@@ -22,7 +24,6 @@ public class BounceEffect : MonoBehaviour
         {
             return;
         }
-
         _isHit = true;
         var effect = Instantiate(_hitEffect, position, Quaternion.identity, _collideWith);
         Destroy(effect, 3);

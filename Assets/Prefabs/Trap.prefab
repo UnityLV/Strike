@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4e31496a5a4826836fb59857ed18fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _explodeOfPlayerEffect: {fileID: 5638744819943921660, guid: 0298c347ef37a4d46a94083bb11b57f0, type: 3}
 --- !u!198 &1752657489399418472
 ParticleSystem:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class TrapTrigger : MonoBehaviour
     {
         if (other.transform.TryGetComponent(out Trap trap))
         {
+            trap.ExplodeOfWall();
             Trigger();
             Destroy(other.gameObject);
         }
@@ -18,6 +19,6 @@ public class TrapTrigger : MonoBehaviour
 
     private void Trigger()
     {
-        _defeatSystem.Defeat();
+        _defeatSystem.Defeat(600);
     }
 }

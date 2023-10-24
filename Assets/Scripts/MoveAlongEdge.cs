@@ -20,13 +20,12 @@ public class MoveAlongEdge : MonoBehaviour
 
     [SerializeField] private float _firstCutX = 1;
     [SerializeField] private float _secondCutX = 1;
-
+    [SerializeField] private bool _alternativeWay;
     private Vector2 _firstPosition;
     private Vector2 _secondPosition;
 
     private void Start()
     {
-        _speed += Random.Range(-0.1f, 0.1f);
         float halfHeight = Camera.main.orthographicSize;
         float halfWidth = halfHeight * Camera.main.aspect;
 
@@ -62,7 +61,15 @@ public class MoveAlongEdge : MonoBehaviour
 
     private void Update()
     {
-        transform.position =
-            Vector2.Lerp(_firstPosition, _secondPosition, Mathf.PingPong(Time.time * _speed, 1f));
+        if (_alternativeWay)
+        {
+            transform.position =
+                Vector2.Lerp(_firstPosition, _secondPosition, Mathf.PingPong(Time.time * _speed, 1f));
+        }
+        else
+        {
+            transform.position =
+                Vector2.Lerp(_secondPosition, _firstPosition, Mathf.PingPong(Time.time * _speed, 1f));
+        }
     }
 }
