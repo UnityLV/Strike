@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7972928375781713413}
   - component: {fileID: 4062774922193830174}
   - component: {fileID: 856593020043927259}
+  - component: {fileID: 1346514253321396556}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Untagged
@@ -4768,6 +4769,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1346514253321396556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415306008307231094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6533433909181747055
 GameObject:
   m_ObjectHideFlags: 0
@@ -4779,6 +4792,7 @@ GameObject:
   - component: {fileID: 5179679226517076369}
   - component: {fileID: 4291609525124404606}
   - component: {fileID: 1674108786944111570}
+  - component: {fileID: 1830527091189363075}
   m_Layer: 0
   m_Name: Glow (1)
   m_TagString: Untagged
@@ -9536,6 +9550,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1830527091189363075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6533433909181747055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7661967518925668273
 GameObject:
   m_ObjectHideFlags: 0
@@ -9547,6 +9573,7 @@ GameObject:
   - component: {fileID: 8711249092799247826}
   - component: {fileID: 1173802795097912531}
   - component: {fileID: 3044545656292763733}
+  - component: {fileID: 1177826032514797145}
   m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
@@ -14304,6 +14331,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1177826032514797145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661967518925668273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7746317465755886540
 GameObject:
   m_ObjectHideFlags: 0
@@ -14317,6 +14356,7 @@ GameObject:
   - component: {fileID: 7435457433994119686}
   - component: {fileID: 774380097726554106}
   - component: {fileID: 4377909935133569888}
+  - component: {fileID: 6071045650111319030}
   m_Layer: 0
   m_Name: KOZIAVA
   m_TagString: Untagged
@@ -14340,7 +14380,7 @@ Transform:
   - {fileID: 7972928375781713413}
   - {fileID: 5179679226517076369}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5432560543442395916
 ParticleSystem:
@@ -19171,3 +19211,15 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &6071045650111319030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746317465755886540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

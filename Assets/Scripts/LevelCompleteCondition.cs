@@ -5,7 +5,7 @@ public class LevelCompleteCondition
 {
     public bool IsThisLevelCompleted(int level)
     {
-        return PlayerPrefs.GetInt($"{level}") == 1;
+        return UnityEngine.PlayerPrefs.GetInt($"{level}") == 1;
     }
 
     public bool IsThisLastUncompleted(int level)
@@ -14,7 +14,7 @@ public class LevelCompleteCondition
 
         for (int i = 1; i <= levels; i++)
         {
-            if (PlayerPrefs.GetInt($"{i}") == 0)
+            if (UnityEngine.PlayerPrefs.GetInt($"{i}") == 0)
             {
                 return i == level;
             }

@@ -89,7 +89,7 @@ public class LevelButton : MonoBehaviour
 
     private void LoadLevel()
     {
-        Game.Instance.LevelLoader. LoadLevel(_settings);
+        Game.Instance.LevelLoader.LoadLevel(_settings);
         
     }
 }

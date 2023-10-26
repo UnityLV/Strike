@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 19802184}
   - component: {fileID: 19975858}
   - component: {fileID: 4146056158127773992}
+  - component: {fileID: 494840259389305227}
+  - component: {fileID: 7027948075789264546}
   m_Layer: 0
   m_Name: SwordHitMagicRed
   m_TagString: Untagged
@@ -4944,6 +4946,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &494840259389305227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c7746d4e544bd882d3a553a4e1950b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7027948075789264546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &128238
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,6 +4981,7 @@ GameObject:
   - component: {fileID: 443080}
   - component: {fileID: 19829986}
   - component: {fileID: 19966776}
+  - component: {fileID: 1440368390273464704}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Untagged
@@ -9770,6 +9797,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1440368390273464704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &156058
 GameObject:
   m_ObjectHideFlags: 0
@@ -9781,6 +9820,7 @@ GameObject:
   - component: {fileID: 438826}
   - component: {fileID: 19878452}
   - component: {fileID: 19989974}
+  - component: {fileID: 630039539186172359}
   m_Layer: 0
   m_Name: Ring
   m_TagString: Untagged
@@ -14596,6 +14636,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &630039539186172359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &184408
 GameObject:
   m_ObjectHideFlags: 0
@@ -14607,6 +14659,7 @@ GameObject:
   - component: {fileID: 496890}
   - component: {fileID: 19840070}
   - component: {fileID: 19959854}
+  - component: {fileID: 4941986937941196011}
   m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
@@ -19422,3 +19475,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4941986937941196011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

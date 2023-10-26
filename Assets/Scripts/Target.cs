@@ -14,7 +14,7 @@ public class Target : MonoBehaviour
     }
     public void SplashEffect()
     {
-        var effect = Instantiate(_splashEffect, transform.position, Quaternion.identity);
+        var effect = Instantiate(_splashEffect, transform.position + Vector3.back, Quaternion.identity);
         Destroy(effect, 4);
     }
 }

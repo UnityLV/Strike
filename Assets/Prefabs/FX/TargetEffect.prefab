@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 177450366308492542}
   - component: {fileID: 3409998376297280869}
   - component: {fileID: 1096905265096982545}
+  - component: {fileID: 7655568887095080919}
   m_Layer: 0
   m_Name: TargetEffect
   m_TagString: Untagged
@@ -4889,6 +4890,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomPercent: 15
+--- !u!114 &7655568887095080919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640795538723130216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8010936539895952939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,6 +4913,7 @@ GameObject:
   - component: {fileID: 1144748576837627125}
   - component: {fileID: 2326398879638382322}
   - component: {fileID: 8805048322897819749}
+  - component: {fileID: 8661598807026899647}
   m_Layer: 0
   m_Name: SparkTrail
   m_TagString: Untagged
@@ -9693,3 +9707,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &8661598807026899647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8010936539895952939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

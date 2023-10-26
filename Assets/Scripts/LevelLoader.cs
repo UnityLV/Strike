@@ -13,13 +13,14 @@ public class LevelLoader
         StartLevelLoad?.Invoke();
         await Task.Delay(300);
         CurrentsSettings = settings;
-        Game.Instance.LevelGoal.SetGoad(settings.Goal, LevelComplete);
+        Game.Instance.LevelGoal.Reset();
+        Game.Instance.LevelGoal.SetGoal(settings.Goal, LevelComplete);
         SceneManager.LoadScene("Game");
     }
 
     private void LevelComplete()
     {
-        PlayerPrefs.SetInt($"{CurrentsSettings.Level}", 1);
+        UnityEngine.PlayerPrefs.SetInt($"{CurrentsSettings.Level}", 1);
         LevelCompleted?.Invoke();
     }
 }

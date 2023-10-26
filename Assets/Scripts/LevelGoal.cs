@@ -1,8 +1,9 @@
 ﻿using System;
+using UnityEngine.Events;
 
 public class LevelGoal
 {
-    public Action ReachCallback { get; set; }
+    private Action ReachCallback { get; set; }
     public int Goal { get; private set; }
     public int Points { get; private set; }
 
@@ -25,9 +26,8 @@ public class LevelGoal
         }
     }
 
-    public void SetGoad(int goal, Action reachCallback)
+    public void SetGoal(int goal, Action reachCallback)
     {
-        Points = 0;
         Goal = goal;
         ReachCallback = reachCallback;
     }

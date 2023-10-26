@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class PointDetector : MonoBehaviour
 {
     [SerializeField] private GameObject _deadEffect;
-    [SerializeField] private TMP_Text _counterText;
+    [SerializeField] private TMP_Text[] _counterTexts;
     public DefeatSystem DefeatSystem;
     public int Points => Game.Instance.LevelGoal.Points;
 
@@ -30,7 +30,7 @@ public class PointDetector : MonoBehaviour
 
             UpdatePoints();
             point.SplashEffect();
-            
+
             Destroy(other.gameObject);
         }
 
@@ -38,9 +38,9 @@ public class PointDetector : MonoBehaviour
         {
             Vector2 collisionPoint = other.ClosestPoint(transform.position);
             ShowDeadParticles(collisionPoint);
-            
+
             DefeatSystem.Defeat(900);
-            
+
             Destroy(other.gameObject);
         }
     }
@@ -59,6 +59,9 @@ public class PointDetector : MonoBehaviour
         }
 
         int targetPoints = Game.Instance.LevelGoal.Goal;
-        _counterText.text = $"Points: {Points}/{targetPoints}";
+        foreach (var counter in _counterTexts)
+        {
+            counter.text = $"Points: {Points}/{targetPoints}";
+        }
     }
 }

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 19983730}
   - component: {fileID: 8285908}
   - component: {fileID: 114730798815361218}
+  - component: {fileID: 114050693376208619}
+  - component: {fileID: 3851360697292128359}
   m_Layer: 0
   m_Name: ExplosionFireballFire
   m_TagString: Untagged
@@ -4959,6 +4961,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomPercent: 8
+--- !u!114 &114050693376208619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60c7746d4e544bd882d3a553a4e1950b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3851360697292128359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &134072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4970,6 +4996,7 @@ GameObject:
   - component: {fileID: 448614}
   - component: {fileID: 19881018}
   - component: {fileID: 19915052}
+  - component: {fileID: 4542511120513375547}
   m_Layer: 0
   m_Name: FireCurve
   m_TagString: Untagged
@@ -9794,6 +9821,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &4542511120513375547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &147980
 GameObject:
   m_ObjectHideFlags: 0
@@ -9805,6 +9844,7 @@ GameObject:
   - component: {fileID: 406126}
   - component: {fileID: 19845456}
   - component: {fileID: 19961850}
+  - component: {fileID: 3278251944022233627}
   m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
@@ -14665,6 +14705,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &3278251944022233627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &158376
 GameObject:
   m_ObjectHideFlags: 0
@@ -14676,6 +14728,7 @@ GameObject:
   - component: {fileID: 438518}
   - component: {fileID: 19876996}
   - component: {fileID: 19913012}
+  - component: {fileID: 917920895424158072}
   m_Layer: 0
   m_Name: Smoke
   m_TagString: Untagged
@@ -19473,6 +19526,18 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &917920895424158072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &160772
 GameObject:
   m_ObjectHideFlags: 0
@@ -19484,6 +19549,7 @@ GameObject:
   - component: {fileID: 422798}
   - component: {fileID: 19899782}
   - component: {fileID: 19943904}
+  - component: {fileID: 1931694980634130913}
   m_Layer: 0
   m_Name: Glow
   m_TagString: Untagged
@@ -24299,3 +24365,15 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &1931694980634130913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66b927a9e484fdcb51cdbc35305165f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

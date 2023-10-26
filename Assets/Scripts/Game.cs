@@ -7,6 +7,7 @@ public class Game : MonoBehaviour
     public readonly LevelCompleteCondition LevelCompleteCondition = new();
     public readonly LevelGoal LevelGoal = new();
     public readonly LevelLoader LevelLoader = new();
+    public readonly Settings Settings = new ();
 
     private void Awake()
     {
@@ -17,6 +18,7 @@ public class Game : MonoBehaviour
         }
 
         Instance = this;
+        Settings.Init();
         DontDestroyOnLoad(gameObject);
     }
 }
