@@ -10,7 +10,7 @@ public class SoundToggle : MonoBehaviour
         {
             return;
         }
-        GetComponent<UnityEngine.UI.Toggle>().isOn = !Game.Instance.Settings.GetIsSoundEnabled();
+        GetComponent<UnityEngine.UI.Toggle>().isOn = Game.Instance.Settings.GetIsSoundEnabled();
     }
 
     public void Enable()
