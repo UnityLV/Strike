@@ -1,5 +1,7 @@
 # Strike
 
+Эксперементальный проект из серии (Игра за неделю)
+
 **Version 0.5** **⬇**
 
 https://github.com/UnityLV/Strike/assets/104660372/c0131ccc-59ec-4d8d-94c9-d6f4685d39a6
