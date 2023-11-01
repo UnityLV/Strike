@@ -14,3 +14,7 @@ https://github.com/UnityLV/Strike/assets/104660372/c0131ccc-59ec-4d8d-94c9-d6f46
 
 <img src="https://i.imgur.com/fiqaoCe.gif" width="200" />
 
+Deploy!
+
+![browser_xWaIczxcW8](https://github.com/UnityLV/Strike/assets/104660372/78d1a040-7266-4f89-9736-240fe574b745)
+
