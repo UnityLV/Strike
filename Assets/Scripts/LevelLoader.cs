@@ -7,12 +7,12 @@ public class LevelLoader
 {
     public event Action LevelCompleted;
     public event Action StartLevelLoad;
-    public LevelSettings CurrentsSettings { get; private set; }
+    private LevelSettings _currentsSettings;
     public async void LoadLevel(LevelSettings settings)
     {
+        _currentsSettings = settings;
         StartLevelLoad?.Invoke();
         await Task.Delay(300);
-        CurrentsSettings = settings;
         Game.Instance.LevelGoal.Reset();
         Game.Instance.LevelGoal.SetGoal(settings.Goal, LevelComplete);
         SceneManager.LoadScene("Game");
@@ -20,7 +20,7 @@ public class LevelLoader
 
     private void LevelComplete()
     {
-        UnityEngine.PlayerPrefs.SetInt($"{CurrentsSettings.Level}", 1);
+        UnityEngine.PlayerPrefs.SetInt($"{_currentsSettings?.Level}", 1);
         LevelCompleted?.Invoke();
     }
 }

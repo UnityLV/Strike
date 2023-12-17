@@ -4,15 +4,22 @@ public class Settings
 {
     const string Sound = "sound";
     const string Effects = "effects";
-
+    public bool IsNeedToShowTutorial { get; set; }
     public void Init()
     {
-        if (PlayerPrefs.GetBool("notFirstRun") == false)
+        IsNeedToShowTutorial = false;
+        if (IsFirstRun())
         {
+            IsNeedToShowTutorial = true;
             SetIsSoundEnabled(true);
             SetIsEffectsEnabled(true);
-            PlayerPrefs.SetBool("notFirstRun",true); 
+            PlayerPrefs.SetBool("notFirstRun", true);
         }
+    }
+
+    private bool IsFirstRun()
+    {
+        return PlayerPrefs.GetBool("notFirstRun") == false;
     }
 
     public bool GetIsSoundEnabled() => PlayerPrefs.GetBool(Sound);
@@ -28,7 +35,7 @@ public class Settings
 
     public void SetIsEffectsEnabled(bool value)
     {
-        PlayerPrefs.SetBool(Effects, value); 
+        PlayerPrefs.SetBool(Effects, value);
         if (value == false) OnEffectsDisabled?.Invoke();
         else OnEffectsEnabled?.Invoke();
     }

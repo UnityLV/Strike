@@ -3,12 +3,13 @@ using UnityEngine.Events;
 
 public class LevelGoal
 {
-    private Action ReachCallback { get; set; }
+    private Action _reachCallback;
     public int Goal { get; private set; }
     public int Points { get; private set; }
 
     public void AddPoints(int points)
     {
+        if (IsGoadReached) return;
         Points += points;
         TryCompleteGoal();
     }
@@ -20,15 +21,17 @@ public class LevelGoal
 
     private void TryCompleteGoal()
     {
-        if (Points >= Goal)
+        if (IsGoadReached)
         {
-            ReachCallback();
+            _reachCallback?.Invoke();
         }
     }
+
+    private bool IsGoadReached => Points >= Goal;
 
     public void SetGoal(int goal, Action reachCallback)
     {
         Goal = goal;
-        ReachCallback = reachCallback;
+        _reachCallback = reachCallback;
     }
 }
